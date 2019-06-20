@@ -1,5 +1,5 @@
 <template lang="html">
-  <h2>{{beer}}</h2>
+  <h2>{{beer.name}}</h2>
 </template>
 
 <script>
