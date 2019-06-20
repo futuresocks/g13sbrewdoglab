@@ -3,7 +3,7 @@
     <h1>BEEERS</h1>
 
     <div class="">
-      <beer-list :beers="beers"></beer-list>
+
     </div>
     <router-view id="view"></router-view>
   </div>

@@ -1,11 +1,16 @@
 <template lang="html">
   <div id="">
-    <h1>Beer</h1>
+    <beer-list />
   </div>
 </template>
 
 <script>
+import BeerList from '@/components/BeerList.vue'
 export default {
+  name: 'beer',
+  components: {
+    "beer-list": BeerList
+  }
 }
 </script>
 
