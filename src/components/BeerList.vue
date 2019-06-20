@@ -1,10 +1,10 @@
 <template lang="html">
-
+  <h2>{{beers}}</h2>
 </template>
 
 <script>
 export default {
-  name: 'beer-view',
+  name: 'beer-list',
   props: ['beers']
 }
 </script>
