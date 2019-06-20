@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="">
-    <beer-list />
+    <beer-list :beers="beers"/>
   </div>
 </template>
 
@@ -8,6 +8,7 @@
 import BeerList from '@/components/BeerList.vue'
 export default {
   name: 'beer',
+  props: ["beers"],
   components: {
     "beer-list": BeerList
   }

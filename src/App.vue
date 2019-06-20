@@ -5,7 +5,7 @@
     <div class="">
 
     </div>
-    <router-view id="view"></router-view>
+    <router-view :beers="beers"id="view"></router-view>
   </div>
 
 </template>
@@ -17,7 +17,8 @@ export default {
   name: 'app',
   data(){
     return {
-      beers: []
+      beers: [],
+      favourites: []
     }
   },
   mounted(){
