@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { eventBus } from '@/main.js'
 import BeerList from './components/BeerList.vue'
 
 export default {
@@ -25,6 +26,10 @@ export default {
     fetch("https://api.punkapi.com/v2/beers")
     .then(res => res.json())
     .then(beers => this.beers = beers)
+
+    eventBus.$on('beer-selected', (beer) => {
+      this.favourites.push(beer)
+    })
   },
   components: {
     "beer-list": BeerList

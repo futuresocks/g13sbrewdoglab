@@ -1,11 +1,21 @@
 <template lang="html">
-  <h2>{{beer.name}}</h2>
+  <div class="">
+    <h2>{{beer.name}}</h2>
+    <button v-on:click="handleButton" type="button" name="button">Add Favourite</button>
+  </div>
 </template>
 
 <script>
+import {eventBus} from '@/main.js'
+
 export default {
   name: 'beer-list-item',
-  props: ['beer']
+  props: ['beer'],
+  methods: {
+    handleButton: function(){
+      eventBus.$emit('beer-selected', this.beer)
+    }
+  }
 }
 </script>
 
