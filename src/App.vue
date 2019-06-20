@@ -3,9 +3,11 @@
     <h1>BEEERS</h1>
 
     <div class="">
-
+<nav> <router-link :to="{ name: 'beer'}">Beers</router-link>
+      | <router-link :to="{ name: 'favourite'}">Favourite</router-link>
+</nav>
     </div>
-    <router-view :beers="beers"id="view"></router-view>
+    <router-view :beers="beers" :favourites="favourites" id="view"></router-view>
   </div>
 
 </template>

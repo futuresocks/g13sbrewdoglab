@@ -1,13 +1,18 @@
 <template lang="html">
   <div id="">
     <h1>Favourite</h1>
-
+    <beer-list :beers="favourites"></beer-list>
   </div>
 
 </template>
 
 <script>
+import BeerList from '@/components/BeerList.vue'
 export default {
+  props: ['favourites'],
+  components: {
+    'beer-list': BeerList
+  }
 }
 </script>
 
