@@ -2,7 +2,7 @@
   <div class="">
     <h1>BEEERS</h1>
     <div class="">
-
+      <beer-list :beers="beers"></beer-list>
     </div>
   </div>
 
@@ -22,6 +22,9 @@ export default {
     fetch("https://api.punkapi.com/v2/beers")
     .then(res => res.json())
     .then(beers => this.beers = beers)
+  },
+  components: {
+    "beer-list": BeerList
   }
 }
 </script>
