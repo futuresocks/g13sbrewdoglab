@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="">
     <h1>Favourite</h1>
-    <beer-list :beers="favourites"></beer-list>
+    <beer-list :beers="favourites" :favourites="favourites"></beer-list>
   </div>
 
 </template>
