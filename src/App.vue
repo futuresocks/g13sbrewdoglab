@@ -1,17 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="">
+    <h1>BEEERS</h1>
+    <div class="">
+
+    </div>
   </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  data(){
+    return {
+      beers: []
+    }
+  },
+  mounted(){
+    fetch("https://api.punkapi.com/v2/beers")
+    .then(res => res.json())
+    .then(beers => this.beers = beers)
   }
 }
 </script>
